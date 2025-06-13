@@ -33,19 +33,19 @@
 // const objStr = { r: 2, a: 2, c: 2, e: 1 };
 // console.log("CharCount:", objStr["e"]);
 
-const items = [
-  { name: "venilla", price: 2.0, quatity: 5 },
-  { name: "bananna", price: 5.0, quatity: 4 },
-  { name: "lemon", price: 6.0, quatity: 10 },
-];
+// const items = [
+//   { name: "venilla", price: 2.0, quatity: 5 },
+//   { name: "bananna", price: 5.0, quatity: 4 },
+//   { name: "lemon", price: 6.0, quatity: 10 },
+// ];
 
-function calToatalVal() {
-  let total = 0;
-  items.map((item, index) => {
-    total += item.price * item.quatity;
-    //total += itemVal;
-  });
-  return total;
-}
-const getTotal = calToatalVal();
-console.log("getTotal:", getTotal);
+// function calToatalVal() {
+//   let total = 0;
+//   items.map((item, index) => {
+//     total += item.price * item.quatity;
+//     //total += itemVal;
+//   });
+//   return total;
+// }
+// const getTotal = calToatalVal();
+// console.log("getTotal:", `${"$"}${getTotal}`);
