@@ -169,3 +169,5 @@ a[c] = 456;
 console.log(a[c]);
 
 // Name Change
+
+// Demo Changes More details
