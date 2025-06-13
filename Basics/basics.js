@@ -120,12 +120,52 @@ const { nameLast, city = "GNT" } = user;
 console.log(nameLast);
 console.log(city); */
 
-const users = {
-  name: "John",
-  greet() {
-    console.log(this.name);
-  },
-};
+// const users = {
+//   name: "John",
+//   greet() {
+//     console.log(this.name);
+//   },
+// };
 
-const greetFn = users.greet;
-greetFn();
+// const greetFn = users.greet;
+// greetFn();
+
+// console.log(add(5, 3));
+// let add = function (a, b) {
+//   return a + b;
+// };
+
+// function sumNestedArray(arr) {
+//   //console.log("Arr_length:", arr.length);
+//   let sum = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     console.log("Array.isArray:", Array.isArray(arr[i]), arr[i]);
+//     console.log("Before_SUM:", sum);
+//     sum += Array.isArray(arr[i]) ? sumNestedArray(arr[i]) : arr[i];
+//     console.log("SUM:", sum);
+//   }
+//   return sum;
+// }
+
+// const nestedArray = [1, 2, [3, [4, 5], 6], 7];
+// const result = sumNestedArray(nestedArray);
+// console.log(result);
+
+// function loop(i) {
+//   if (i < 3) {
+//     setTimeout(() => console.log(i), 100);
+//     loop(i + 1);
+//   }
+// }
+// loop(0);
+
+const a = {};
+const b = { key: "b" };
+const c = { key: "c" };
+console.log(a[b]);
+
+a[b] = 123;
+a[c] = 456;
+console.log(a[c]);
+
+// Name Change
