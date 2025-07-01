@@ -4,14 +4,18 @@
 // let filterArr = arr.filter((item, index) => arr.indexOf(item) == index);
 // console.log("FilterArray:", filterArr);
 
-// const str = "abcd";
-// const strArr = ["b", "b", "c", "d"];
+/* const str = "abcd";
+const strArr = ["b", "b", "c", "d"];
 
-// let strSplit = str.split("");
-// console.log("strSplit:", strSplit);
+let strSplit = str.split("");
+console.log("strSplit:", strSplit);
+//console.log("strSplit_Reverse:", strSplit.reverse());
+let revers = strSplit.reverse();
+console.log("revers:", revers);
+console.log("strSplit_Reverse_Join:", revers.join(""));
 
-// let strJoin = strArr.join("");
-// console.log("strJoin:", strJoin);
+let strJoin = strArr.join("");
+console.log("strJoin:", strJoin); */
 
 // let arr = "abcd";
 // console.log("Str Length:", arr.length);
