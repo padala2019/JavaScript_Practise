@@ -369,3 +369,22 @@ freezeObject.city = "Pune";
 freezeObject.age = 40;
 delete freezeObject.age;
 console.log("freezeObject:", freezeObject); // freezeObject: { name: 'Naveen', age: 25 }
+
+//You are given an array of integer arrays (e.g., number[][]). Group arrays that contain the same elements, regardless of order.
+
+// console.log(['1','2'].join(''))
+// let str = '12';
+
+const input = [
+  [1, 2, 3],
+  [3, 2, 1],
+  [4, 5, 6],
+  [6, 5, 4],
+  [1, 1, 2],
+];
+
+// // output: [
+// //   [ [1, 2, 3], [3, 2, 1] ],
+// //   [ [4, 5, 6], [6, 5, 4] ],
+// //   [ [1, 1, 2] ]
+// // ]

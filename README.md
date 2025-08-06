@@ -36,6 +36,8 @@
 23. Remove a specific character — cleanly.
 24. Find the shortest word in a sentence.
 25. Longest palindromic substring — two-pointer style.
+// You are given an array of integer arrays (e.g., number[][]). Group arrays that contain the same elements, regardless of order.
+
 -->
 
 # Array-Based Questions
