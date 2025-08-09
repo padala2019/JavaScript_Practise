@@ -17,4 +17,4 @@ function longestSubStringWithOutRepeatChar(s) {
 }
 let str = "pwwkew";
 let longestSubStr = longestSubStringWithOutRepeatChar(str);
-console.log("LongestSubString:", longestSubStr);
+console.log("LongestSubString:", longestSubStr); // 3

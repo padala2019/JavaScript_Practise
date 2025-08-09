@@ -13,4 +13,4 @@ function flipTheWord(str) {
 }
 let s = "the sky is blue";
 let flipWord = flipTheWord(s);
-console.log("flipWord:", flipWord);
+console.log("flipWord:", flipWord); // blue is sky the
