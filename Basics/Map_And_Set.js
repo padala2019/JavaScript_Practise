@@ -13,7 +13,7 @@ map.size – returns the current element count.
 */
 
 console.log(
-  "************************** Map() ************************************"
+  "************************** Map() Method************************************"
 );
 // Create a new Map
 const myMap = new Map();
