@@ -368,7 +368,7 @@ freezeObject.name = "Krish";
 freezeObject.city = "Pune";
 freezeObject.age = 40;
 delete freezeObject.age;
-console.log("freezeObject:", freezeObject); // freezeObject: { name: 'Naveen', age: 25 }
+console.log("freezeObject1:", freezeObject); // freezeObject: { name: 'Naveen', age: 25 }
 
 //You are given an array of integer arrays (e.g., number[][]). Group arrays that contain the same elements, regardless of order.
 
