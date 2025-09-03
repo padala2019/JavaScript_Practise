@@ -336,7 +336,7 @@ console.log(anotherObject.originalValue); // Output: 100 (original object unchan
 
 /************************************************************************************/
 
-const sealObject = {
+/* const sealObject = {
   name: "Abc",
   age: 30,
 };
@@ -347,7 +347,7 @@ sealObject.age = 35;
 sealObject.city = "GnT";
 delete sealObject.age;
 delete sealObject.name;
-console.log("sealObject:", sealObject); // sealObject: { name: 'BCA', age: 35 }
+console.log("sealObject:", sealObject); // sealObject: { name: 'BCA', age: 35 } */
 
 // let normalObject = {
 //   name: "Raveendra",
@@ -357,7 +357,7 @@ console.log("sealObject:", sealObject); // sealObject: { name: 'BCA', age: 35 }
 // delete normalObject.age;
 // console.log("normalObject:", normalObject);
 
-let freezeObject = {
+/* let freezeObject = {
   name: "Naveen",
   age: 25,
 };
@@ -368,23 +368,26 @@ freezeObject.name = "Krish";
 freezeObject.city = "Pune";
 freezeObject.age = 40;
 delete freezeObject.age;
-console.log("freezeObject1:", freezeObject); // freezeObject: { name: 'Naveen', age: 25 }
+console.log("freezeObject1:", freezeObject); // freezeObject: { name: 'Naveen', age: 25 } */
 
 //You are given an array of integer arrays (e.g., number[][]). Group arrays that contain the same elements, regardless of order.
 
 // console.log(['1','2'].join(''))
 // let str = '12';
 
-const input = [
-  [1, 2, 3],
-  [3, 2, 1],
-  [4, 5, 6],
-  [6, 5, 4],
-  [1, 1, 2],
-];
+// const input = [
+//   [1, 2, 3],
+//   [3, 2, 1],
+//   [4, 5, 6],
+//   [6, 5, 4],
+//   [1, 1, 2],
+// ];
 
 // // output: [
 // //   [ [1, 2, 3], [3, 2, 1] ],
 // //   [ [4, 5, 6], [6, 5, 4] ],
 // //   [ [1, 1, 2] ]
 // // ]
+
+let arr = [3, "Abc", [4, 8]];
+console.log(arr[2]);

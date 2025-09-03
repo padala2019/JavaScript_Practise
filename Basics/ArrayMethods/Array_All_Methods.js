@@ -2,17 +2,17 @@
 let fruits1 = ["apple", "banana"];
 fruits1.push("orange"); // fruits is now ['apple', 'banana', 'orange']
 
+//unshift(): Adds one or more elements to the beginning of an array and returns the new length of the array.
+let fruits2 = ["banana", "orange"];
+fruits2.unshift("apple"); // fruits is now ['apple', 'banana', 'orange']
+
 //pop(): Removes the last element from an array and returns that element.
-let fruits2 = ["apple", "banana", "orange"];
-let removedFruit2 = fruits2.pop(); // removedFruit is 'orange', fruits is now ['apple', 'banana']
+let fruits3 = ["apple", "banana", "orange"];
+let removedFruit = fruits3.pop(); // removedFruit is 'orange', fruits is now ['apple', 'banana']
 
 //shift(): Removes the first element from an array and returns that element.
-let fruits3 = ["apple", "banana", "orange"];
-let removedFruit3 = fruits3.shift(); // removedFruit is 'apple', fruits is now ['banana', 'orange']
-
-//unshift(): Adds one or more elements to the beginning of an array and returns the new length of the array.
-let fruits4 = ["banana", "orange"];
-fruits4.unshift("apple"); // fruits is now ['apple', 'banana', 'orange']
+let fruits4 = ["apple", "banana", "orange"];
+let removedFruit4 = fruits4.shift(); // removedFruit is 'apple', fruits is now ['banana', 'orange']
 
 //forEach(): Executes a provided function once for each array element. It does not return a new array.
 let numbers1 = [1, 2, 3];
@@ -29,7 +29,7 @@ console.log(doubledNumbers);
 
 //filter(): Creates a new array with all elements that pass the test implemented by the provided function.
 let numbers3 = [1, 2, 3, 4, 5];
-let evenNumbers = numbers3.filter(function (number) {
+let evenNumbers = numbers3.filter((number) => {
   return number % 2 === 0;
 }); // evenNumbers is [2, 4]
 
@@ -120,3 +120,22 @@ function getNormalArray(arr) {
 
 const finalArray = getNormalArray(arr);
 console.log("FinalArray:", finalArray); // [ 1, [ 4, 9, 16 ], 25 ]
+
+/*************************************************************************** */
+
+const arr11 = [1, [2, 3, 4], 5];
+let result1 = [];
+
+function getNormalArray(arr11) {
+  for (let i = 0; i < arr11.length; i++) {
+    if (Array.isArray(arr11[i])) {
+      getNormalArray(arr11[i]);
+    } else {
+      result.push(arr11[i]);
+    }
+  }
+  return result;
+}
+
+const finalArray11 = getNormalArray(arr);
+console.log("FinalArray:", finalArray11); //[ 1, 2, 3, 4, 5 ]
