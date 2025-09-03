@@ -7,7 +7,7 @@ function firstNonRepeatCharFirstApproach(str) {
   for (let i = 0; i < str.length; i++) {
     charObj[str[i]] = (charObj[str[i]] || 0) + 1;
   }
-  //console.log(charObj);
+  console.log(charObj);
   //console.log(Object.keys(charObj));
   for (let i = 0; i < str.length; i++) {
     if (charObj[str[i]] === 1) {
@@ -33,5 +33,5 @@ function firstNonRepeatCharSecondApproach(str) {
 }
 
 let s = "racecar";
-let nonRepeatChar = firstNonRepeatCharSecondApproach(s);
+let nonRepeatChar = firstNonRepeatCharFirstApproach(s);
 console.log("NonRepeatChar:", nonRepeatChar);

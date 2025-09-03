@@ -2,6 +2,8 @@
 
 # Multi Line CMD windows Shift+Alt+A
 
+# Multi Line CMD Mac Shift + Option + A
+
 # ctrl + shift +l select and change similar entire file at onces
 
 # Run Java Script file -> node fileName.js
@@ -36,6 +38,8 @@
 23. Remove a specific character — cleanly.
 24. Find the shortest word in a sentence.
 25. Longest palindromic substring — two-pointer style.
+// You are given an array of integer arrays (e.g., number[][]). Group arrays that contain the same elements, regardless of order.
+
 -->
 
 # Array-Based Questions
