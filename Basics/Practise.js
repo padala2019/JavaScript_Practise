@@ -25,15 +25,15 @@ const getFinalVal = getParticularProductData(categories[2]);
 console.log("getFinalData:", getFinalVal);
  */
 
-const input = [
-  [1, 2, 3],
-  [3, 2, 1],
-  [4, 5, 6],
-  [6, 5, 4],
-  [1, 1, 2],
-];
+// const input = [
+//   [1, 2, 3],
+//   [3, 2, 1],
+//   [4, 5, 6],
+//   [6, 5, 4],
+//   [1, 1, 2],
+// ];
 
-const groupSimilarArrays = (arr) => {
+/* const groupSimilarArrays = (arr) => {
   const map = new Map();
 
   for (const subArr of arr) {
@@ -50,5 +50,55 @@ const groupSimilarArrays = (arr) => {
 };
 
 const result = groupSimilarArrays(input);
-console.log("Result:", result);
+console.log("Result:", result); */
 // result will be: [ [ [1, 2, 3], [3, 2, 1] ], [ [4, 5, 6], [6, 5, 4] ], [ [1, 1, 2] ] ]
+
+/* const str = "i love @ india 22 in my % 42.2 percentage peoples #";
+
+function findOutNumericNumbersFromString(str) {
+  let arr = str.split(" ");
+  let mainArr = [];
+  console.log("Arr:", arr);
+  for (let i = 0; i < arr.length; i++) {
+    if (!isNaN(arr[i])) {
+      console.log("TRUE:", arr[i]);
+      mainArr.push(arr[i]);
+    } else {
+      console.log("FALSE:", arr[i]);
+    }
+  }
+  return mainArr;
+}
+
+let result = findOutNumericNumbersFromString(str);
+console.log("result:", result[0]);
+console.log("result:", result[1]); */
+
+// const property = "ABC";
+// const name = "Raveendra";
+
+// const objNew = {
+//   a: 100,
+//   b: 200,
+//   title: "My Nums",
+// };
+// multipleByTwo(objNew);
+// function multipleByTwo(obj) {
+//   for (const key in obj) {
+//     if (typeof obj[key] === "number") {
+//       obj[key] *= 2;
+//     }
+//   }
+// }
+// console.log(objNew);
+
+//const str = "i love @ india 22 in my % 42.2 percentage peoples #";
+
+const fast = new Promise((resolve) =>
+  setTimeout(() => reject("Fast one!"), 500)
+);
+const slow = new Promise((resolve) =>
+  setTimeout(() => resolve("Slow one!"), 2000)
+);
+
+Promise.race([fast, slow]).then((result) => console.log(result)); // "Fast on
