@@ -390,4 +390,4 @@ console.log("freezeObject1:", freezeObject); // freezeObject: { name: 'Naveen', 
 // // ]
 
 let arr = [3, "Abc", [4, 8]];
-console.log(arr[2]);
+console.log(arr[90]);

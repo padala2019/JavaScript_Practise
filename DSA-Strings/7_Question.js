@@ -15,3 +15,7 @@ let s1 = "geeks";
 let s2 = "kseeg";
 let stringsAreAnagrams = checkGivenStringsAreAnagrams(s1, s2);
 console.log("Given Strings are:", stringsAreAnagrams);
+
+const sort = s2.split("");
+console.log("Sort_1:", s1.split("").sort().join(""));
+console.log("Sort_2:", s2.split("").sort().join(""));

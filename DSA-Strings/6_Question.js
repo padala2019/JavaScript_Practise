@@ -3,6 +3,7 @@
 
 function flipTheWord(str) {
   let s = str.split(" ");
+  console.log(s);
   let result = [];
 
   for (let i = s.length - 1; i >= 0; i--) {
