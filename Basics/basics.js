@@ -1,10 +1,10 @@
 console.log("Hello World!");
 
-/* const promise1 = Promise.reject(1);
+/* const promise1 = Promise.resolve(1);
 const promise2 = Promise.resolve(2);
-const promise3 = Promise.resolve("Error occurred");
+const promise3 = Promise.reject("Error occurred");
 
-const result = Promise.all([promise1, promise2, promise3])
+const result = Promise.race([promise1, promise2, promise3])
   .then((results) => {
     console.log("Resolved:", results);
   })
@@ -12,7 +12,6 @@ const result = Promise.all([promise1, promise2, promise3])
     console.error("Rejected:", error); // Output: Rejected: Error occurred
   });
  */
-
 /* console.log(x);
 
 var x;
@@ -388,6 +387,94 @@ console.log("freezeObject1:", freezeObject); // freezeObject: { name: 'Naveen', 
 // //   [ [4, 5, 6], [6, 5, 4] ],
 // //   [ [1, 1, 2] ]
 // // ]
+//===========================================================
+// let arr = [3, "Abc", [4, 8]];
+// console.log(arr[90]); // undefined
 
-let arr = [3, "Abc", [4, 8]];
-console.log(arr[90]);
+// let obj = { name: "AAAA" };
+
+// function passByReference(obj) {
+//   obj = { name: "CCCC" };
+//   console.log("Inside:", obj.name);
+// }
+// passByReference(obj);
+// console.log(obj.name);
+
+// Find Second Largest Number from given array.
+/* let a = [10, 20, 4, 45, 99, 109];
+a.sort((a, b) => b - a);
+
+let first = a[0];
+let res = null;
+
+for (let i = 1; i < a.length; i++) {
+  if (a[i] < first) {
+    res = a[i];
+    break;
+  }
+}
+console.log(res !== null ? res : "No second largest element"); */
+
+// Find The maximum number from given array.
+/* let a = [10, 20, 4, 45, 99, 109];
+function findLargetNumber(arr) {
+  console.log(arr);
+  // arr.sort((a, b) => b - a);
+  console.log("New:", arr);
+  let maxNumber = arr[0];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (maxNumber < arr[i]) {
+      maxNumber = arr[i];
+    }
+  }
+  console.log(maxNumber);
+  return maxNumber;
+}
+let result = findLargetNumber(a);
+console.log("result:", result); */
+
+// const animal = {
+//   eats: true,
+//   walk() {
+//     console.log("Dog walk");
+//     return "WALKING";
+//   },
+// };
+
+// const dog = Object.create(animal);
+// dog.barks = true;
+
+// const myPuppy = Object.create(dog);
+// console.log(myPuppy.barks);
+// console.log(myPuppy.eats);
+// const walk = myPuppy.walk();
+// console.log(walk);
+
+// undefined
+//myFunc(); // TypeError: myFunc is not a function
+
+let str = "racecar";
+let right = str.split("");
+console.log("Len:", right.join());
+
+let numbers1 = [1, 2, 3];
+numbers1.forEach((number) => {
+  console.log(number * 2); // Logs 2, 4, 6
+});
+
+// Define a standard function
+function greet() {
+  return "Hello!";
+}
+
+// Attach custom properties directly to the function object
+greet.language = "English";
+greet.status = "Active";
+greet.id = 1;
+
+console.log(greet()); // Output: "Hello!"
+console.log(greet.language); // Output: "English"
+console.log(typeof greet); // Output: "function" (a callable object type)
+console.log(greet instanceof Object); // Output: true
+console.log(greet.id); // Output: 1

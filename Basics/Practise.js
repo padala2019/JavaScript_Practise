@@ -94,11 +94,80 @@ console.log("result:", result[1]); */
 
 //const str = "i love @ india 22 in my % 42.2 percentage peoples #";
 
-const fast = new Promise((resolve) =>
-  setTimeout(() => reject("Fast one!"), 500)
-);
-const slow = new Promise((resolve) =>
-  setTimeout(() => resolve("Slow one!"), 2000)
-);
+// const fast = new Promise((reject) =>
+//   setTimeout(() => reject("Fast one!"), 500),
+// );
+// const slow = new Promise((resolve) =>
+//   setTimeout(() => resolve("Slow one!"), 2000),
+// );
 
-Promise.race([fast, slow]).then((result) => console.log(result)); // "Fast on
+// Promise.race([fast, slow]).then((result) => console.log(result)); // "Fast on
+
+/* new Promise((resolve, reject) => {
+  reject("Success!");
+})
+  .then((result) => {
+    console.log(result); // Logs "Success!"
+    //throw new Error("Something went wrong!"); // Jumps to the nearest handler
+  })
+  .then(() => {
+    // This is SKIPPED because of the rejection above
+    console.log("I will never run");
+    throw new Error("Something went 1 wrong!");
+  })
+  .catch((error) => {
+    // The closest rejection handler
+    console.error("Caught_1:", error.message);
+    //throw new Error("Something went 1 wrong!"); // Logs "Caught: Something went wrong!"
+  })
+  .then(() => {
+    console.log("I will never run after catch");
+  })
+  .catch((error) => {
+    // The closest rejection handler
+    console.error("Caught:", error.message); // Logs "Caught: Something went wrong!"
+  });
+new Promise((resolve, reject) => {
+  resolve("Sucess");
+})
+  .then(() => {
+    throw new Error("Error ");
+  })
+  .catch(() => {}); */
+
+// const arr = [1, 2, 3];
+// const sum = arr.reduce((acc, num) => acc + num, 9);
+// console.log(sum); // 6
+
+let person = {
+  name: "rahual",
+  age: 22,
+  printInfo() {
+    console.log(`Person name is ${this.name} age is: ${this.age}`);
+  },
+};
+person.printInfo();
+
+const obj = {
+  a: 1,
+  b: 2,
+  sum() {
+    return this.a + this.b;
+  },
+};
+const res = obj.sum();
+console.log("SUM:", res);
+
+// const cart = [
+//   { item: "Laptop", price: 1000 },
+//   { item: "Mouse", price: 25 },
+//   { item: "Keyboard", price: 75 },
+// ];
+
+// const totalSpent = cart.reduce((acc, currentItem) => {
+//   console.log("acc:", acc);
+//   console.log("currentItem:", currentItem);
+//   return acc + currentItem.price;
+// }, 0);
+
+//console.log(totalSpent); // Output: 1100

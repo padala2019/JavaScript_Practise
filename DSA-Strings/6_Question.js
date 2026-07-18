@@ -9,8 +9,8 @@ function flipTheWord(str) {
   for (let i = s.length - 1; i >= 0; i--) {
     result.push(s[i]);
   }
-  console.log("Results:", result);
-  return result.join(" ");
+  //console.log("Results:", result.join().replaceAll(",", " "));
+  return result.join(" ").replaceAll(",", "");
 }
 let s = "the sky is blue";
 let flipWord = flipTheWord(s);
