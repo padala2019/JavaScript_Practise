@@ -14,7 +14,7 @@ let removeDuplicate = [...new Set(sortTedArray)];
 console.log("removeDuplicate:", removeDuplicate);
 
 let filterArr = combinedArray.filter(
-  (item, index) => combinedArray.indexOf(item) == index
+  (item, index) => combinedArray.indexOf(item) == index,
 );
 console.log("FilterArray:", filterArr);
 
@@ -22,14 +22,14 @@ const str = "abcd";
 const strArr = ["b", "b", "c", "d"];
 
 let strSplit = str.split(""); // Convert String to Array Elements
-console.log("strSplit:", strSplit);
+console.log("strSplit:", strSplit); // [ 'a', 'b', 'c', 'd' ]
 //console.log("strSplit_Reverse:", strSplit.reverse());
 let revers = strSplit.reverse();
-console.log("revers:", revers);
-console.log("strSplit_Reverse_Join:", revers.join(""));
+console.log("revers:", revers); // [ 'd', 'c', 'b', 'a' ]
+console.log("strSplit_Reverse_Join:", revers.join("")); // dcba
 
 let strJoin = strArr.join(""); // Convert Array Elements to String
-console.log("strJoin:", strJoin);
+console.log("strJoin:", strJoin); // bbcd
 
 // let arr = "abcd";
 // console.log("Str Length:", arr.length);

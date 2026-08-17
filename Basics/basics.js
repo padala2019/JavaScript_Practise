@@ -454,27 +454,33 @@ console.log("result:", result); */
 // undefined
 //myFunc(); // TypeError: myFunc is not a function
 
-let str = "racecar";
-let right = str.split("");
-console.log("Len:", right.join());
+// let str = "racecar";
+// let right = str.split("");
+// console.log("Len:", right.join());
 
-let numbers1 = [1, 2, 3];
-numbers1.forEach((number) => {
-  console.log(number * 2); // Logs 2, 4, 6
-});
+// let numbers1 = [1, 2, 3];
+// numbers1.forEach((number) => {
+//   console.log(number * 2); // Logs 2, 4, 6
+// });
 
 // Define a standard function
-function greet() {
-  return "Hello!";
+// function greet() {
+//   return "Hello!";
+// }
+
+// // Attach custom properties directly to the function object
+// greet.language = "English";
+// greet.status = "Active";
+// greet.id = 1;
+
+// console.log(greet()); // Output: "Hello!"
+// console.log(greet.language); // Output: "English"
+// console.log(typeof greet); // Output: "function" (a callable object type)
+// console.log(greet instanceof Object); // Output: true
+// console.log(greet.id); // Output: 1
+if (true) {
+  let blockScoped = "Stay inside";
+  var functionScoped = "I can escape blocks";
 }
-
-// Attach custom properties directly to the function object
-greet.language = "English";
-greet.status = "Active";
-greet.id = 1;
-
-console.log(greet()); // Output: "Hello!"
-console.log(greet.language); // Output: "English"
-console.log(typeof greet); // Output: "function" (a callable object type)
-console.log(greet instanceof Object); // Output: true
-console.log(greet.id); // Output: 1
+console.log(functionScoped); // "I can escape blocks"
+console.log(blockScoped);
