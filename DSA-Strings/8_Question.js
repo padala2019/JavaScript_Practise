@@ -12,6 +12,7 @@ function longestSubStringWithOutRepeatChar(s) {
     }
     set.add(s[right]);
     maxLength = Math.max(maxLength, right - left + 1);
+    console.log("set:", set);
   }
   return maxLength;
 }

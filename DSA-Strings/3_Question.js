@@ -11,6 +11,7 @@ function removeDuplicateFromString(str) {
       seen.add(c);
     }
   }
+  console.log("Seen:", seen);
   return result;
 }
 

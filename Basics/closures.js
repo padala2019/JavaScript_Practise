@@ -1,10 +1,6 @@
-let xObj = {
-  name: "ABC",
-  address: {
-    city: "GNT",
-  },
-};
-let yObj = { ...xObj };
-yObj.name = "XYZ";
-console.log("XObj:", xObj.name);
-console.log("YObj:", yObj.name);
+const userSpeed = undefined;
+
+const speed1 = userSpeed || 50; // Returns 50 (0 is falsy)
+console.log(speed1);
+const speed2 = userSpeed ?? 50; // Returns 0  (0 is not null/undefined)
+console.log(speed2);

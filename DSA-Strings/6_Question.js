@@ -4,13 +4,15 @@
 function flipTheWord(str) {
   let s = str.split(" ");
   console.log(s);
+  console.log(s.length);
   let result = [];
 
   for (let i = s.length - 1; i >= 0; i--) {
     result.push(s[i]);
   }
+  console.log(result);
   //console.log("Results:", result.join().replaceAll(",", " "));
-  return result.join(" ").replaceAll(",", "");
+  //return result.join(" ").replaceAll(",", "");
 }
 let s = "the sky is blue";
 let flipWord = flipTheWord(s);

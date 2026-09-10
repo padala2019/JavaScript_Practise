@@ -478,9 +478,30 @@ console.log("result:", result); */
 // console.log(typeof greet); // Output: "function" (a callable object type)
 // console.log(greet instanceof Object); // Output: true
 // console.log(greet.id); // Output: 1
-if (true) {
-  let blockScoped = "Stay inside";
-  var functionScoped = "I can escape blocks";
+// if (true) {
+//   let blockScoped = "Stay inside";
+//   var functionScoped = "I can escape blocks";
+// }
+// console.log(functionScoped); // "I can escape blocks"
+// console.log(blockScoped);
+
+const globalVar = "I am Global";
+function outerFunction() {
+  const outerVar = "I am from Outer";
+  function innerFunction() {
+    const innerVar = "I am from Inner";
+    // 1. Can access its own local variables
+    console.log(innerVar); // Output: "I am from Inner"
+
+    // 2. Can access variables from its parent's scope (Lexical Scoping)
+    console.log(outerVar); // Output: "I am from Outer"
+
+    // 3. Can access variables from the global scope
+    console.log(globalVar); // Output: "I am Global"
+  }
+  innerFunction();
+  // ERROR: Outer functions cannot look down into inner scopes
+  console.log(innerVar); // ReferenceError: innerVar is not defined
 }
-console.log(functionScoped); // "I can escape blocks"
-console.log(blockScoped);
+
+outerFunction();

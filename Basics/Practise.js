@@ -253,36 +253,109 @@ new Promise((resolve, reject) => {
 
 /* findSumIndicesWith_Target  or Two SUM */
 
-// let arr = [2, 7, 11, 15];
-// let target = 9;
+let arr = [2, 3, 5, 8];
+let target = 8;
 
-// function findTwoSum(arr, target) {
-//   let map = new Map();
-//   for (let i = 0; i < arr.length; i++) {
-//     map.set(arr[i], i);
-//   }
-//   console.log("MAP:", map);
+function findTwoSum(arr, target) {
+  let map = new Map();
+  for (let i = 0; i < arr.length; i++) {
+    map.set(arr[i], i);
+  }
+  console.log("MAP:", map);
 
+  for (let i = 0; i < arr.length; i++) {
+    let pairedToFind = target - arr[i];
+    if (map.has(pairedToFind) && map.get(pairedToFind) !== i) {
+      // map.get(pairedToFind) !== i // For avoid Duplicate from Given Input [7, 2, 12, 16];target = 14;
+      return [i, map.get(pairedToFind)];
+    }
+  }
+}
+
+let result = findTwoSum(arr, target);
+console.log("result:", result);
+
+// (function () {
+//   // Code here runs immediately
+//   console.log("IIFE executed!");
+// })();
+
+// async function getData() {
+//   await console.log("getData Called");
+// }
+// (function () {
+//   getData();
+// })();
+
+// const p1 = new Promise((resolve, reject) =>
+//   setTimeout(() => resolve("Fast data!"), 50),
+// );
+// const p2 = new Promise((resolve, reject) =>
+//   setTimeout(() => resolve("Too slow!"), 200),
+// );
+
+// Promise.race([p1, p2])
+//   .then((value) => console.log("Winner:", value)) // Output: Winner: Fast data!
+//   .catch((error) => console.error("Loser:", error));
+
+/* Generating All Subarrays */
+// let input = [1, 2, 3];
+// function generateAllSubArray(arr) {
+//   let result = [];
 //   for (let i = 0; i < arr.length; i++) {
-//     let pairedToFind = target - arr[i];
-//     if (map.has(pairedToFind) && map.get(pairedToFind) !== i) {
-//       // map.get(pairedToFind) !== i // For avoid Duplicate from Given Input [7, 2, 12, 16];target = 14;
-//       return [i, map.get(pairedToFind)];
+//     for (let j = i; j < arr.length; j++) {
+//       result.push(arr.slice(i, j + 1));
 //     }
 //   }
+//   return result;
 // }
+// let rsult = generateAllSubArray(input);
+// console.log("rsult:", rsult); // [ [ 1 ], [ 1, 2 ], [ 1, 2, 3 ], [ 2 ], [ 2, 3 ], [ 3 ] ]
 
-// let result = findTwoSum(arr, target);
-// console.log("result:", result);
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// let res = fruits.splice(1, 1, "a");
+// console.log("res:", res);
 
-(function () {
-  // Code here runs immediately
-  console.log("IIFE executed!");
-})();
+// let arrFlat = [1, [2, 3], [4, [5]]];
+// let flatRes = arrFlat.flat(Infinity); // [1, 2, 3, 4, 5]
+// console.log("flatRes:", flatRes);
 
-async function getData() {
-  await console.log("getData Called");
+// const map = new Map();
+// let obj = { name: "Ravi" };
+// map.set("key", obj);
+// console.log("MAP:", map);
+//obj = null; // you drop your variable reference
+// BUT the object still lives inside the Map
+
+let count = 0;
+
+function test() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      count++;
+      resolve(count);
+    }, 0);
+  });
 }
-(function () {
-  getData();
-})();
+
+async function main() {
+  console.log("A", count);
+
+  const p1 = test();
+
+  count++;
+
+  const p2 = test();
+
+  const result1 = await p1;
+
+  console.log("B", result1, count);
+
+  const result2 = await p2;
+
+  console.log("C", result2, count);
+}
+
+main();
+
+console.log("D", count);

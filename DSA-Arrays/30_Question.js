@@ -16,3 +16,31 @@ function findMissingNumber(arr) {
 const numbers = [1, 2, 4, 5];
 const missingNumber = findMissingNumber(numbers);
 console.log("The missing number is:", missingNumber); // Output: The missing number is: 3
+
+function findMultipleMissingNumbers(arr) {
+  //const min = Math.min(...arr);
+  let arrSort = arr.sort((a, b) => a - b);
+  console.log("arrSort:", arrSort);
+
+  //const max = Math.max(...arr);
+  let min = arrSort[0];
+  console.log("min:", min);
+  const max = arrSort[arrSort.length - 1];
+  console.log("max:", max);
+  const numSet = new Set(arr);
+  console.log("numSet:", numSet);
+  const missingNumbers = [];
+
+  // Loop through the entire range from min to max
+  for (let i = min; i <= max; i++) {
+    if (!numSet.has(i)) {
+      missingNumbers.push(i);
+    }
+  }
+
+  return missingNumbers;
+}
+
+// Example usage:
+const mixedNums = [2, 3, 6, 7, 10]; // Missing: 4, 5, 8, 9
+console.log(findMultipleMissingNumbers(mixedNums)); // Output: [4, 5, 8, 9]
